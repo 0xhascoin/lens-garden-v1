@@ -1,0 +1,54 @@
+.header {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 0;
+    margin: auto;
+    width: 95%;
+    margin-bottom: 2rem;
+
+}
+
+.header .logo-container {
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.header .logo-container p {
+    margin-left: 10px;
+    font-size: 1.3rem;
+    /* border: 1px solid black; */
+    font-weight: 500;
+}
+
+.header .lens-logo {
+    /* border: 1px solid black; */
+    height: 70px;
+    margin: none;
+}
+
+.header .connect-wallet-button {
+    background-color: #4895ef;
+    color: white;
+}
+
+.header .connected-button {
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    /* border: 1px solid #f9f9f9; */
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.header .connected-button .address {
+    margin-right: 10px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.header .connected-button .logout-button {
+    background-color: #bc4749;
+    color: white;
+    font-size: .9rem;
+}

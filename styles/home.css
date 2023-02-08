@@ -1,0 +1,10 @@
+.home {
+    height: 100vh;
+}
+
+.home .content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+}

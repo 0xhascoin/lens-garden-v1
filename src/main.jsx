@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
 
 import {
@@ -24,6 +23,7 @@ import { LensProvider } from '@lens-protocol/react';
 
 // Pages
 import Home from '../pages/home';
+import GetLensStats from '../pages/getLensStats';
 
 
 const lensConfig = {
@@ -44,6 +44,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<GetLensStats />} />
         </Routes>
       </Router>
     </LensProvider>

@@ -11,12 +11,13 @@ const LogoutButton = () => {
         if (isConnected) {
             await logout();
             await disconnectAsync();
+            location.reload()
+
         }
     };
 
     return (
         <div className="connected-button">
-            <span className='address'>{address.slice(0, 6)}...{address.slice(-4)}</span>
             <button className="logout-button" onClick={logoutHandler}>Logout</button>
         </div>
     );

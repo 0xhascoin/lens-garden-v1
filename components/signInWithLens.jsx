@@ -1,11 +1,11 @@
 import React from 'react'
 import { useWalletLogin } from '@lens-protocol/react';
-import { useEffect, useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 
-const ConnectWalletButton = ({ setLoginLoading }) => {
-    const { login, error, isPending } = useWalletLogin();
+
+const SignInWithLens = ({ setLoginLoading, checkIfLensConnected }) => {
+    const { login, isPending, error } = useWalletLogin();
     const { isConnected } = useAccount();
     const { disconnectAsync } = useDisconnect();
 
@@ -25,14 +25,24 @@ const ConnectWalletButton = ({ setLoginLoading }) => {
             const signer = await connector.getSigner();
             await login(signer);
             setLoginLoading(false);
+            checkIfLensConnected();
         }
     };
 
     return (
-        <button className="connect-wallet-button" onClick={loginHandler}>
-            Connect Wallet
-        </button>
+        <div>
+            {isPending ? (
+                <p>Loading....</p>
+            ) : (
+                <>
+                {error && <p>An error occured.</p>}                
+                <button className="connect-wallet-button" onClick={loginHandler}>
+                    Sign in With Lens
+                </button>
+                </>
+            )}
+        </div>
     )
 }
 
-export default ConnectWalletButton
+export default SignInWithLens;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { abi } from '../constants';
+import { abi } from '../../constants';
 import { ethers } from 'ethers';
 
 const CONTRACT_ADDRESS = "0x4575b131bEfda75Ea9843358c700E0B0BeF2fE2a";

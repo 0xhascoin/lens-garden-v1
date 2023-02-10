@@ -22,8 +22,8 @@ import { bindings as wagmiBindings } from '@lens-protocol/wagmi';
 import { LensProvider } from '@lens-protocol/react';
 
 // Pages
-import Home from '../pages/home';
-import GetLensStats from '../pages/getLensStats';
+import Home from './pages/home';
+import GetLensStats from './pages/getLensStats';
 
 
 const lensConfig = {

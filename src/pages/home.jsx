@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../src/App.css';
+// import '../src/App.css';
 import SignInWithLens from '../components/signInWithLens';
 import { useNavigate } from 'react-router-dom';
 
@@ -102,7 +102,7 @@ const Home = () => {
 
 
     return (
-        <div className="App">
+        <div className="App border-black">
             {currentAccount === "" ? (
                 <button onClick={connectWallet}>
                     Connect to Wallet
